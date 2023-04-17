@@ -59,8 +59,8 @@ plugins:
 
 author:
   name   : "설악이의 블로그"
-#   avatar : "/assets/images/bio-photo.jpg"
-  logo: "/assets/images/2005.png"
+  avatar : "/assets/images/bio-photo.jpg"
+#   logo: "/assets/images/2005.png"
   bio    : "version 2"
   links:
 #     - label: "Website"
@@ -94,6 +94,7 @@ defaults:
       path: ""
       type: posts
     values:
+      show_date: true
       layout: single
       author_profile: true
       read_time: true
