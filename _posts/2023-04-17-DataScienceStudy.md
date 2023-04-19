@@ -2,9 +2,9 @@
 title: "Data Science 준비"
 excerpt_separator: "<!--more-->"
 categories:
-  - DataScience
+  - dataScience
 tags:
-  - DataScience
+  - dataScience
 ---
 
 # training site   

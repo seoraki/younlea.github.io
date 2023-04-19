@@ -2,7 +2,7 @@
 title: "github.io 블로그 페이지별 목차 만드는 방법"
 excerpt_separator: "<!--more-->"
 categories:
-  - Blog
+  - blog
 tags:
   - github.io
 toc : true
