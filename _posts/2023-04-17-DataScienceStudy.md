@@ -5,6 +5,9 @@ categories:
   - dataScience
 tags:
   - dataScience
+
+toc : true
+toc_sticky : true
 ---
 
 # training site   
