@@ -65,7 +65,7 @@ author:
   bio    : "version 2"
 
 sidebar:
-  nav : sidebar-sample
+  nav : sidebar-main
 
 links:
 #     - label: "Website"
