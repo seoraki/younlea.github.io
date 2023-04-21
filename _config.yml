@@ -78,10 +78,6 @@ links:
 #       icon: "fab fa-fw fa-instagram"
 #       url: "https://instagram.com/"
 
-
-# sidebar:
-#   nav : sidebar-main
-
 footer:
   links:
 #     - label: "Twitter"
@@ -100,6 +96,8 @@ defaults:
       path: ""
       type: posts
     values:
+     sidebar:
+      nav : sidebar-main
       show_date: true
       layout: single
       author_profile: true
