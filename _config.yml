@@ -65,7 +65,6 @@ author:
   bio    : "version 2"
 
 sidebar:
-  - title: "category"
   nav : sidebar-sample
 
 links:
