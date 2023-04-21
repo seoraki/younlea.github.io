@@ -11,4 +11,4 @@ toc_sticky : true
 ---
 
 # training site    
-[training site](www.datamanim.com/intro.html)      
+[trainig site link](https://www.datamanim.com/intro.html)
