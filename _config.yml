@@ -79,8 +79,8 @@ links:
 #       url: "https://instagram.com/"
 
 
-sidebar:
-  nav : sidebar-main
+# sidebar:
+#   nav : sidebar-main
 
 footer:
   links:
