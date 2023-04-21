@@ -10,5 +10,5 @@ toc : true
 toc_sticky : true
 ---
 
-# training site   
-## www.datamanim.com/intro.html   
+# training site    
+[training site]("www.datamanim.com/intro.html")      
