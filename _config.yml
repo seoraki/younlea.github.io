@@ -96,8 +96,6 @@ defaults:
       path: ""
       type: posts
     values:
-     sidebar:
-      nav : sidebar-main
       show_date: true
       layout: single
       author_profile: true
@@ -105,6 +103,8 @@ defaults:
       comments: true
       share: true
       related: true
+      sidebar:
+        nav : sidebar-main
   # _pages
   - scope:
       path: "_pages"
