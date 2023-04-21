@@ -63,7 +63,12 @@ author:
   avatar : "/assets/images/bio-photo.jpg"
 #   logo: "/assets/images/2005.png"
   bio    : "version 2"
-  links:
+
+sidebar:
+  - title: "category"
+  nav : sidebar-sample
+
+links:
 #     - label: "Website"
 #       icon: "fas fa-fw fa-link"
 #       url: "https://"
@@ -102,7 +107,6 @@ defaults:
       comments: true
       share: true
       related: true
-      sidebar_main: true
   # _pages
   - scope:
       path: "_pages"
