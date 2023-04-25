@@ -1,0 +1,13 @@
+---
+title: "pandas 전처리"
+excerpt_separator: "<!--more-->"
+categories:
+  - dataScience
+tags:
+  - dataScience
+
+toc : true
+toc_sticky : true
+---
+apply(lambda x == "xxxx")
+apply(lambda x: x.replace({'Yes': 1, 'No': 0}))
