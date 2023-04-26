@@ -10,35 +10,92 @@ toc : true
 toc_sticky : true
 ---
 
+## <spen style="color:red">데이터 정렬 및 변환</spen>
+> pandas - crosstab() - 두 변수의 원소 조합 빈도 확인(normalize 인자 설정시 비율을 손쉽게 계산   
+> pandas - sort_valus() - 특정 변수를 기준으로 정렬   
+> pandas - melt() - wide form -> long form   
+> pandas - pivot() - long form -> wide form   
+
 ## train and test sample 생성
 ```python
 from sklearn.model_selection import train_test_split
-
+df_train, df_test = train_test_split(df, test_size=0.8, random_state=123)
 ```
 
 ## 상관 관계 -선형성 검사
 ```python
+#pandas - corr(), method - peason, kendal, spearman
+
+from scipy.stats import pearsonr
+from scipy.stats import spearmanr
+from scipy.stats import kendalltau
 ```
 
 
-## 비계층 군집 분석 - k-mean
+## 비계층 군집 분석 - k-mean (random_state, seed 고정 필수)
 ```python
+from sklearn.cluster import KMeans
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import StandardScaler
 ```
 
 ## 단순 회귀 분석
 ```python
+from statsmodels.formula.api import ols
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_absolute_error
+from sklearn.metrics import mean_squared_error
+
 ```
 
-## 다중 회귀 부넉
+## 다중 회귀 분석 - 다중 공선성
 ```python
+from patsy import dmatrices
+from statsmodels.stats.outliers_influence import variance_inflation_factor as vif
+
+formula = "casual ~ " + ".join(df_sub.columns[:-1])
+y, X = dmatrices(formula, data = df_sub, return_type = "dataframe")
+df_vif = pd.DataFrame()
+df_vif["colname"] = X.columns
+df_vif["VIF"] = [vif(X.values, i) for i in range(X.shape[1])]
+df_vif
+
 ```
 
-## 로지스틱 회귀분석
+## 로지스틱 회귀분석 - 승산비(OR, odds Ratio)
 ```python
+from statsmodels.api import Logit
+from sklearn.linear_model import LogisticRegression
+
+from sklearn.metrics import accuracy_score
+from sklearn.metrics import precision_score
+from sklearn.metrics import recall_score
+from sklearn.metrics import f1_score
+
+#모델 만들기
+model = Logit(endog = df_train["outcome"], exog = df_train.loc[:,["col1","col2","col3"]]).fit()
+
+#모델 이용해서 예측하기
+pred = model.predict(exog = df_test.loc[:,["col1","col2","col3"]])
+
+#성능 검토
+accuracy_score(y_pred = pred, y_true = df_test["output"])
 ```
 
 ## 나이브 베이즈
 ```python
+from sklearn.naive_bayes import GaussianNB
+#모델 만들기
+nb_model = GaussianNB().fit(X = df_train.loc[:, ["col1","col2","col3"]], y = df_train["output"])
+
+#모델 이용해서 예측하기 (확률이라 predict_proba를 사용함)
+pred = nb_model.predict_proba(df_test.loc[:,["col1","col2","col3"]])
+pred[:4,]
+
+#성능 검토
+from sklearn.metrics import accuracy_score
+accuracy_score(y_pred = (pred[:,1] > 0.5) + 0, y_true = df_test["output"])
+
 ```
 
 ## KNN
@@ -47,10 +104,11 @@ from sklearn.neighbors import KNeighborsClassifier #KNN 분류 모델
 from sklearn.neighbors import KNeighborsRegressor  #KNN 회귀 모델
 
 #model만들고
-model = KNeighborsClassifier()
-model.fit(X = df_train.loc[:, ["col1","col2","col3"]], y = df_train['output'])
+model = KNeighborsClassifier().fit(X = df_train.loc[:, ["col1","col2","col3"]], y = df_train['output'])
+
 #model을 이용 예측하고
 pred = model.predict(df_test.loc[:,["col1","col2","col3"]])
+
 #model 성능을 검토한다. 
 from sklearn.metrics import accuracy_score
 accuracy_score(y_pred = pred, y_true = df_test["output"])
