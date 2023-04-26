@@ -37,6 +37,10 @@ from scipy.stats import kendalltau
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.preprocessing import StandardScaler
+
+scaler = StandardScler().fit(df)
+scaler.transform(df)
+
 ```
 
 ## 단순 회귀 분석
@@ -45,6 +49,24 @@ from statsmodels.formula.api import ols
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error
 from sklearn.metrics import mean_squared_error
+
+#ols 
+import pandas as pd
+from statsmodels.formula.api import ols
+df = pd.read_csv(xxxx)
+
+model = ols(formula = "independent ~ dependent_val", data = df_train).fit()
+pred = model.predict(df_test)
+pred[:4]
+
+mean_squared_error(y_pred = pred, y_true = df_test["independent"])**0.5  #RMSE
+
+#LinearRegression
+from sklearn.linear_model import LinearRegression
+model = LinearRegression().fit(X = df[["PL"]], y=df["PW"])
+model.coef_
+mddel.intercept_
+model.predict(df[["PL"]])
 
 ```
 
