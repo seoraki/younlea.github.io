@@ -43,10 +43,26 @@ from sklearn.model_selection import train_test_split
 
 ## KNN
 ```python
+from sklearn.neighbors import KNeighborsClassifier #KNN 분류 모델
+from sklearn.neighbors import KNeighborsRegressor  #KNN 회귀 모델
+
+#model만들고
+model = KNeighborsClassifier()
+model.fit(X = df_train.loc[:, ["col1","col2","col3"]], y = df_train['output'])
+#model을 이용 예측하고
+pred = model.predict(df_test.loc[:,["col1","col2","col3"]])
+#model 성능을 검토한다. 
+from sklearn.metrics import accuracy_score
+accuracy_score(y_pred = pred, y_true = df_test["output"])
+
 ```
 
 ## 의사결정트리
 ```python
+from sklearn.tree import DecisionTreeClassifier #분류 나무
+from sklearn.tree import DecisionTreeRegressor #회귀 나무
+
+
 ```
 
 [sklearn 설명](https://www.datamanim.com/dataset/98_sklearn/sklearn.html#)
