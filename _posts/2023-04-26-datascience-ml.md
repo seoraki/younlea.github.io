@@ -204,7 +204,7 @@ sklearn
 [scipy설명](https://www.datamanim.com/dataset/97_scipy/scipy.html)    
 <details>
 <summary>scipy tree</summary>
-  
+
 ```
 scipy
 │
