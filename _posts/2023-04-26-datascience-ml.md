@@ -177,15 +177,15 @@ import sklearn
 sklearn.__all__
 ```
 ```
-<spen style="color:red"> </spen>
+
 sklearn
 │
 ├── 01 preprocessing (전처리)
 │   │
 │   ├── 스케일러
-│   │   ├── <spen style="color:red">MinMaxScaler</spen>
-│   │   ├── <spen style="color:red">RobustScaler</spen>
-│   │   └── <spen style="color:red">StandardScaler</spen>
+│   │   ├── MinMaxScaler
+│   │   ├── RobustScaler
+│   │   └── StandardScaler
 │   │
 │   └── 인코더
 │       ├── LabelEncoder
@@ -196,7 +196,7 @@ sklearn
 │   ├── 데이터셋 분리
 │   │   ├── KFold
 │   │   ├── StratifiedKFold
-│   │   └── <spen style="color:red">train_test_split</spen>
+│   │   └── train_test_split
 │   │
 │   └── 하이퍼파라미터 튜닝
 │       └── GridSearchCV
@@ -213,34 +213,34 @@ sklearn
 │   │   ├── LogisticRegression
 │   │   └── RidgeClassifier
 │   │
-│   ├── <spen style="color:red">neighbors</spen>
-│   │   └── <spen style="color:red">KNeighborsClassifier</spen>
+│   ├── neighbors
+│   │   └── KNeighborsClassifier
 │   │
 │   ├── svm
 │   │   ├── SVC
 │   │   └── SVR
 │   │
-│   └── <spen style="color:red">tree</spen>
-│       ├── <spen style="color:red">DecisionTreeClassifier</spen>
-│       ├── <spen style="color:red">DecisionTreeRegressor</spen>
+│   └── tree
+│       ├── DecisionTreeClassifier
+│       ├── DecisionTreeRegressor
 │       ├── ExtraTreeClassifier
 │       └── ExtraTreeRegressor
 │
 ├── 04 모델평가
 │   │
 │   ├── metrics
-│   │   ├── <spen style="color:red">accuracy_score</spen>
+│   │   ├── accuracy_score
 │   │   ├── classification_report
 │   │   ├── confusion_matrix
-│   │   ├── <spen style="color:red">f1_score</spen>
+│   │   ├── f1_score
 │   │   ├── log_loss
-│   │   ├── <spen style="color:red">mean_absolute_error</spen>
-│   │   ├── <spen style="color:red">mean_squared_error</spen>
-│   │   └── <spen style="color:red">roc_auc_score</spen>
+│   │   ├── mean_absolute_error
+│   │   ├── mean_squared_error
+│   │   └── roc_auc_score
 │   │
-│   └── <spen style="color:red">model</spen> (정의된 모델에서 추출)
-│       ├── <spen style="color:red">predict</spen>
-│       └── <spen style="color:red">predict_proba</spen>
+│   └── model (정의된 모델에서 추출)
+│       ├── predict
+│       └── predict_proba
 │
 └── 05 최종앙상블
     │
@@ -307,6 +307,6 @@ statsmodels
 │
 └── 04 회귀분석
     │
-    └── <spen style="color:red">formula.api</spen>
-        └── <spen style="color:red">ols</spen>
+    └── formula.api
+        └── ols  
 ```
