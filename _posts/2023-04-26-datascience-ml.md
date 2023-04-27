@@ -33,6 +33,7 @@ from scipy.stats import kendalltau
 
 
 ## 비계층 군집 분석 - k-mean (random_state, seed 고정 필수)
+[Scaler참고](https://for-my-wealthy-life.tistory.com/18)   
 ```python
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import MinMaxScaler
@@ -146,8 +147,8 @@ from sklearn.tree import DecisionTreeRegressor #회귀 나무
 ```
 
 [sklearn 설명](https://www.datamanim.com/dataset/98_sklearn/sklearn.html#)
-<details>
-<summary>sklearn tree</summary>
+<!-- <details>
+<summary>sklearn tree</summary> -->
   
 ```
 sklearn
@@ -222,10 +223,10 @@ sklearn
         ├── VotingClassifier
         └── VotingRegressor
 ```
-</details>
+<!-- </details> -->
 [scipy설명](https://www.datamanim.com/dataset/97_scipy/scipy.html)    
-<details>
-<summary>scipy tree</summary>
+<!-- <details>
+<summary>scipy tree</summary> -->
 
 ```
 scipy
@@ -242,10 +243,10 @@ scipy
 │
 └── 06 stats (통계 분석) 
 ```
-</details>
+<!-- </details> -->
 [statsmodels설명](https://www.datamanim.com/dataset/96_statsmodels/statsmodels.html)   
-<details>
-<summary>statsmodels tree</summary>
+<!-- <details>
+<summary>statsmodels tree</summary> -->
   
 ```
 statsmodels
@@ -281,4 +282,4 @@ statsmodels
     └── formula.api
         └── ols
 ```
-</details>
+<!-- </details> -->
