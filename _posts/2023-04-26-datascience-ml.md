@@ -10,7 +10,7 @@ toc : true
 toc_sticky : true
 ---
 
-## <spen style="color:red">데이터 정렬 및 변환</spen>
+## 데이터 정렬 및 변환
 > pandas - crosstab() - 두 변수의 원소 조합 빈도 확인(normalize 인자 설정시 비율을 손쉽게 계산   
 > pandas - sort_valus() - 특정 변수를 기준으로 정렬   
 > pandas - melt() - wide form -> long form   
@@ -172,14 +172,20 @@ from sklearn.tree import DecisionTreeRegressor #회귀 나무
 [sklearn 설명](https://www.datamanim.com/dataset/98_sklearn/sklearn.html#)
   
 ```
+sklearn 함수가 기억 안나면 아래처럼 원하는 depth에서 하나씩 확인하고 찾아 들어갈수 있다.
+import sklearn
+sklearn.__all__
+```
+```
+<spen style="color:red"> </spen>
 sklearn
 │
 ├── 01 preprocessing (전처리)
 │   │
 │   ├── 스케일러
-│   │   ├── MinMaxScaler
-│   │   ├── RobustScaler
-│   │   └── StandardScaler
+│   │   ├── <spen style="color:red">MinMaxScaler</spen>
+│   │   ├── <spen style="color:red">RobustScaler</spen>
+│   │   └── <spen style="color:red">StandardScaler</spen>
 │   │
 │   └── 인코더
 │       ├── LabelEncoder
@@ -190,7 +196,7 @@ sklearn
 │   ├── 데이터셋 분리
 │   │   ├── KFold
 │   │   ├── StratifiedKFold
-│   │   └── train_test_split
+│   │   └── <spen style="color:red">train_test_split</spen>
 │   │
 │   └── 하이퍼파라미터 튜닝
 │       └── GridSearchCV
@@ -207,34 +213,34 @@ sklearn
 │   │   ├── LogisticRegression
 │   │   └── RidgeClassifier
 │   │
-│   ├── neighbors
-│   │   └── KNeighborsClassifier
+│   ├── <spen style="color:red">neighbors</spen>
+│   │   └── <spen style="color:red">KNeighborsClassifier</spen>
 │   │
 │   ├── svm
 │   │   ├── SVC
 │   │   └── SVR
 │   │
-│   └── tree
-│       ├── DecisionTreeClassifier
-│       ├── DecisionTreeRegressor
+│   └── <spen style="color:red">tree</spen>
+│       ├── <spen style="color:red">DecisionTreeClassifier</spen>
+│       ├── <spen style="color:red">DecisionTreeRegressor</spen>
 │       ├── ExtraTreeClassifier
 │       └── ExtraTreeRegressor
 │
 ├── 04 모델평가
 │   │
 │   ├── metrics
-│   │   ├── accuracy_score
+│   │   ├── <spen style="color:red">accuracy_score</spen>
 │   │   ├── classification_report
 │   │   ├── confusion_matrix
-│   │   ├── f1_score
+│   │   ├── <spen style="color:red">f1_score</spen>
 │   │   ├── log_loss
-│   │   ├── mean_absolute_error
-│   │   ├── mean_squared_error
-│   │   └── roc_auc_score
+│   │   ├── <spen style="color:red">mean_absolute_error</spen>
+│   │   ├── <spen style="color:red">mean_squared_error</spen>
+│   │   └── <spen style="color:red">roc_auc_score</spen>
 │   │
-│   └── model (정의된 모델에서 추출)
-│       ├── predict
-│       └── predict_proba
+│   └── <spen style="color:red">model</spen> (정의된 모델에서 추출)
+│       ├── <spen style="color:red">predict</spen>
+│       └── <spen style="color:red">predict_proba</spen>
 │
 └── 05 최종앙상블
     │
@@ -265,7 +271,11 @@ scipy
 ```
 
 [statsmodels설명](https://www.datamanim.com/dataset/96_statsmodels/statsmodels.html)   
-  
+```
+statsmodels 함수가 기억 안나면 아래처럼 원하는 depth에서 하나씩 확인하고 찾아 들어갈수 있다.
+import statsmodels
+help(statsmodels)
+```  
 ```
 statsmodels
 │
@@ -297,6 +307,6 @@ statsmodels
 │
 └── 04 회귀분석
     │
-    └── formula.api
-        └── ols
+    └── <spen style="color:red">formula.api</spen>
+        └── <spen style="color:red">ols</spen>
 ```
