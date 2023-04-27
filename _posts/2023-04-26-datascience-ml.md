@@ -66,7 +66,7 @@ df_centers
 
 ```
 
-## 단순 회귀 분석
+## 단순 회귀 분석 (선형) [선형방정식이 모델이고, 독립변수 넣으면 추정값이 나온다.]
 ```python
 from statsmodels.formula.api import ols
 from sklearn.linear_model import LinearRegression
@@ -93,7 +93,7 @@ model.predict(df[["PL"]])
 
 ```
 
-## 다중 회귀 분석 - 다중 공선성
+## 다중 회귀 분석 - 다중 공선성, 선형 [선형방정식이 모델이고, 독립변수 넣으면 추정값이 나온다.]
 ```python
 from patsy import dmatrices
 from statsmodels.stats.outliers_influence import variance_inflation_factor as vif
@@ -105,6 +105,7 @@ df_vif["colname"] = X.columns
 df_vif["VIF"] = [vif(X.values, i) for i in range(X.shape[1])]
 df_vif
 
+from statsmodels.formula.api import ols  #요거써서 여러값이 들어왔을때 수치 예측한다. 
 ```
 
 ## 로지스틱 회귀분석 - 승산비(OR, odds Ratio)
