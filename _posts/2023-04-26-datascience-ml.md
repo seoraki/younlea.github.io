@@ -43,6 +43,28 @@ scaler = StandardScler().fit(df)
 scaler.transform(df)
 
 ```
+k-mean은 연속형 데이터에서 사용한다.    
+
+``` python
+#군집분석 이전에 정규화
+nor_minmax = MinMaxScaler().fit(bmi_data)
+bmi_data_nor = nor_minmax.transform(bmi_data)
+bmi_data_nor = pd.DataFrame(bmi_data_nor, columns= bmi_data.columns)
+bmi_data_nor.head(2)
+
+#model.labels_
+model = KMeans(n_clusters=4, random_state= 123).fit(bmi_data_nor)   #모델을 만들때는 정규화 실시한 내용을 바탕으로 만들고.. 
+bmi_data["cluster"] = model.labels_
+bmi_data.head(3)
+bmi_data["cluster"].value_counts()
+bmi_data.groupby("cluster")["Age"].mean()
+
+#model.cluster_centers_
+model= KMeans(n_clusters=3, random_state= 123).fit(bmi_data)
+df_centers = pd.DataFrame(model.cluster_centers_, columns=bmi_data.columns)
+df_centers
+
+```
 
 ## 단순 회귀 분석
 ```python
