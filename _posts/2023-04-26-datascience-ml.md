@@ -170,8 +170,6 @@ from sklearn.tree import DecisionTreeRegressor #회귀 나무
 ```
 
 [sklearn 설명](https://www.datamanim.com/dataset/98_sklearn/sklearn.html#)
-<!-- <details>
-<summary>sklearn tree</summary> -->
   
 ```
 sklearn
@@ -246,10 +244,9 @@ sklearn
         ├── VotingClassifier
         └── VotingRegressor
 ```
-<!-- </details> -->
+
 [scipy설명](https://www.datamanim.com/dataset/97_scipy/scipy.html)    
-<!-- <details>
-<summary>scipy tree</summary> -->
+
 
 ```
 scipy
@@ -266,10 +263,8 @@ scipy
 │
 └── 06 stats (통계 분석) 
 ```
-<!-- </details> -->
+
 [statsmodels설명](https://www.datamanim.com/dataset/96_statsmodels/statsmodels.html)   
-<!-- <details>
-<summary>statsmodels tree</summary> -->
   
 ```
 statsmodels
@@ -305,4 +300,3 @@ statsmodels
     └── formula.api
         └── ols
 ```
-<!-- </details> -->
