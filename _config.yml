@@ -63,34 +63,28 @@ author:
   avatar : "/assets/images/bio-photo.jpg"
 #   logo: "/assets/images/2005.png"
   bio    : "version 2"
-
+  email  : "younlea.kim@gmail.com"
+  
 links:
-#     - label: "Website"
-#       icon: "fas fa-fw fa-link"
-#       url: "https://"
-#     - label: "Twitter"
-#       icon: "fab fa-fw fa-twitter-square"
-#       url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/younlea/younlea.github.io"
-#     - label: "Instagram"
-#       icon: "fab fa-fw fa-instagram"
-#       url: "https://instagram.com/"
+  - label: "GitHub"
+    icon: "fab fa-fw fa-github"
+    url: "https://github.com/younlea/younlea.github.io"
 
 footer:
   links:
-#     - label: "Twitter"
-#       icon: "fab fa-fw fa-twitter-square"
-#       url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/younlea/younlea.github.io"
-#     - label: "Instagram"
-#       icon: "fab fa-fw fa-instagram"
-#       url: "https://instagram.com/"
 
 defaults:
+  # default
+  - scope:
+      path: ""
+    values:
+      layout: home
+      author_profile: true
+      sidebar:
+        nav : sidebar-main
   # _posts
   - scope:
       path: ""
@@ -103,8 +97,8 @@ defaults:
       comments: true
       share: true
       related: true
-#       sidebar:
-#         nav : sidebar-main
+      sidebar:
+        nav : sidebar-main
   # _pages
   - scope:
       path: "_pages"
